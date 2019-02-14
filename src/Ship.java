@@ -1,81 +1,80 @@
 class Ship{
 
-    public int MediumCapacity;
-    public String Name;
-    public int NumberOfContainers;
+    public int mediumCapacity;
+    public String name;
+    public int numberOfContainers;
 
-    private int Weight;
-    private int Height;
+    private int weight;
+    private int height;
 
-    static int ShipPrice;
+    protected static int shipPrice;
 
-    protected int MaxSpeed;
-    protected int MinSpeed;
+    protected int maxSpeed;
+    protected int minSpeed;
 
 
-    public Ship(int MediumCapacity, String Name, int NumberOfContainers){
-        this.MediumCapacity = MediumCapacity;
-        this.Name = Name;
-        this.NumberOfContainers = NumberOfContainers;
+    public Ship(int mediumCapacity, String name, int numberOfContainers){
+        this.mediumCapacity = mediumCapacity;
+        this.name = name;
+        this.numberOfContainers = numberOfContainers;
     }
 
-    public Ship(int MediumCapacity, String Name, int NumberOfContainers, int Weight, int Height, int MaxSpeed, int MinSpeed){
-        this.MediumCapacity = MediumCapacity;
-        this.Name = Name;
-        this.NumberOfContainers = NumberOfContainers;
-        this.Weight = Weight;
-        this.Height = Height;
-        this.MaxSpeed = MaxSpeed;
-        this.MinSpeed = MinSpeed;
+    public Ship(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed){
+        this.mediumCapacity = mediumCapacity;
+        this.name = name;
+        this.numberOfContainers = numberOfContainers;
+        this.weight = weight;
+        this.height = height;
+        this.maxSpeed = maxSpeed;
+        this.minSpeed = minSpeed;
     }
 
-    public void resetValues(int MediumCapacity, String Name, int NumberOfContainers, int Weight, int Height, int MaxSpeed, int MinSpeed){
-        this.MediumCapacity = MediumCapacity;
-        this.Name = Name;
-        this.NumberOfContainers = NumberOfContainers;
-        this.Weight = Weight;
-        this.Height = Height;
-        this.MaxSpeed = MaxSpeed;
-        this.MinSpeed = MinSpeed;
+    public void resetValues(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed){
+        this.mediumCapacity = mediumCapacity;
+        this.name = name;
+        this.numberOfContainers = numberOfContainers;
+        this.weight = weight;
+        this.height = height;
+        this.maxSpeed = maxSpeed;
+        this.minSpeed = minSpeed;
     }
 
     public int getWeight(){
-        return this.Weight;
+        return this.weight;
     }
     public void setWeight(int Weight){
-        this.Weight = Weight;
+        this.weight = weight;
     }
 
 
     public int getHeight(){
-        return this.Height;
+        return this.height;
     }
-    public void setHeight(int Height){
-        this.Height = Height;
+    public void setHeight(int height){
+        this.height = height;
 
     }
 
     public static void printStaticShipPrice(){
-        ShipPrice = 555555;
-        System.out.println("The static price is " +ShipPrice+ " dollars");
+        shipPrice = 555555;
+        System.out.println("The static price is " +shipPrice+ " dollars");
     }
 
     public void printShipPrice(){
-        ShipPrice = 444444;
-        System.out.println("The static price is " +ShipPrice+ " dollars (second)");
+        shipPrice = 444444;
+        System.out.println("The static price is " +shipPrice+ " dollars (second)");
     }
 
     @Override
-    public String toString(){
-        String string = null;
-        System.out.println("----------------------------------");
-        System.out.println("Weight of the ship is "+this.Weight);
-        System.out.println("Height of the ship is "+this.Height);
-        System.out.println("Medium capacity of the ship is "+this.MediumCapacity);
-        System.out.println("The name of the ship is "+this.Name);
-        System.out.println("Number of container "+this.NumberOfContainers);
-        System.out.println("Max speed of the ship is "+this.MaxSpeed);
-        System.out.println("Min speed of the ship is "+this.MinSpeed);
-        return string;
+    public String toString() {
+        return "Ship{" +
+                "MediumCapacity=" + mediumCapacity +
+                ", Name='" + name + '\'' +
+                ", NumberOfContainers=" + numberOfContainers +
+                ", Weight=" + weight +
+                ", Height=" + height +
+                ", MaxSpeed=" + maxSpeed +
+                ", MinSpeed=" + minSpeed +
+                '}';
     }
 }
