@@ -14,12 +14,10 @@ class Ship{
 
 
     public Ship(int mediumCapacity, String name, int numberOfContainers){
-        this.mediumCapacity = mediumCapacity;
-        this.name = name;
-        this.numberOfContainers = numberOfContainers;
+        this(mediumCapacity, name, numberOfContainers, 0, 0, 0, 0, 0);
     }
 
-    public Ship(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed){
+    public Ship(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice){
         this.mediumCapacity = mediumCapacity;
         this.name = name;
         this.numberOfContainers = numberOfContainers;
@@ -27,9 +25,10 @@ class Ship{
         this.height = height;
         this.maxSpeed = maxSpeed;
         this.minSpeed = minSpeed;
+        this.shipPrice = shipPrice;
     }
 
-    public void resetValues(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed){
+    public void resetValues(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice){
         this.mediumCapacity = mediumCapacity;
         this.name = name;
         this.numberOfContainers = numberOfContainers;
@@ -37,12 +36,13 @@ class Ship{
         this.height = height;
         this.maxSpeed = maxSpeed;
         this.minSpeed = minSpeed;
+        this.shipPrice = shipPrice;
     }
 
     public int getWeight(){
         return this.weight;
     }
-    public void setWeight(int Weight){
+    public void setWeight(int weight){
         this.weight = weight;
     }
 
@@ -52,17 +52,14 @@ class Ship{
     }
     public void setHeight(int height){
         this.height = height;
-
     }
 
     public static void printStaticShipPrice(){
-        shipPrice = 555555;
-        System.out.println("The static price is " +shipPrice+ " dollars");
+        System.out.println("Price: "+shipPrice);
     }
 
     public void printShipPrice(){
-        shipPrice = 444444;
-        System.out.println("The static price is " +shipPrice+ " dollars (second)");
+        System.out.println("Price: "+shipPrice);
     }
 
     @Override

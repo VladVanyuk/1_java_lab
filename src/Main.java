@@ -2,15 +2,14 @@ public class Main{
 
     public static void main(String[] args) {
 
-        Ship Titanic = new Ship(100, "TITANIC", 233);
-        Titanic.setWeight(20000);
-        Titanic.setHeight(200);
-        Titanic.toString();
-        Titanic.printStaticShipPrice();
+        Ship titanic = new Ship(100, "TITANIC", 233);
+        titanic.setWeight(20000);
+        titanic.setHeight(200);
+        titanic.toString();
+        titanic.printStaticShipPrice();
 
-
-        Ship BlackPearl = new Ship(200," BLACKPEARL", 333, 2000, 100, 150, 1);
-        BlackPearl.toString();
-        BlackPearl.printShipPrice();
+        Ship blackPearl = new Ship(200,"BLACKPEARL", 333, 2000, 100, 150, 10, 1);
+        blackPearl.toString();
+        blackPearl.printShipPrice();
     }
 }
