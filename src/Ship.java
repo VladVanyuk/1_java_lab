@@ -14,13 +14,13 @@ class Ship{
 
 
     public Ship(int mediumCapacity, String name, int numberOfContainers){
-        this(mediumCapacity, name, numberOfContainers, 0, 0, 0, 0, 0);
-    }
-
-    public Ship(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice){
         this.mediumCapacity = mediumCapacity;
         this.name = name;
         this.numberOfContainers = numberOfContainers;
+    }
+
+    public Ship(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice){
+        this(mediumCapacity, name, numberOfContainers);
         this.weight = weight;
         this.height = height;
         this.maxSpeed = maxSpeed;
