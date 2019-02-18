@@ -64,7 +64,7 @@ class Ship{
 
     @Override
     public String toString() {
-        return "Ship{"+
+        return "Ship{" +
                 "MediumCapacity=" + mediumCapacity +
                 ", Name='" + name + '\'' +
                 ", NumberOfContainers=" + numberOfContainers +
