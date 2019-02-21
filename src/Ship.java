@@ -1,4 +1,4 @@
-class Ship{
+class Ship {
 
     public int mediumCapacity;
     public String name;
@@ -13,13 +13,13 @@ class Ship{
     protected int minSpeed;
 
 
-    public Ship(int mediumCapacity, String name, int numberOfContainers){
+    public Ship(int mediumCapacity, String name, int numberOfContainers) {
         this.mediumCapacity = mediumCapacity;
         this.name = name;
         this.numberOfContainers = numberOfContainers;
     }
 
-    public Ship(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice){
+    public Ship(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice) {
         this(mediumCapacity, name, numberOfContainers);
         this.weight = weight;
         this.height = height;
@@ -28,7 +28,7 @@ class Ship{
         this.shipPrice = shipPrice;
     }
 
-    public void resetValues(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice){
+    public void resetValues(int mediumCapacity, String name, int numberOfContainers, int weight, int height, int maxSpeed, int minSpeed, int shipPrice) {
         this.mediumCapacity = mediumCapacity;
         this.name = name;
         this.numberOfContainers = numberOfContainers;
@@ -39,27 +39,29 @@ class Ship{
         this.shipPrice = shipPrice;
     }
 
-    public int getWeight(){
+    public int getWeight() {
         return this.weight;
     }
-    public void setWeight(int weight){
+
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
 
-    public int getHeight(){
+    public int getHeight() {
         return this.height;
     }
-    public void setHeight(int height){
+
+    public void setHeight(int height) {
         this.height = height;
     }
 
-    public static void printStaticShipPrice(){
-        System.out.println("Price: "+shipPrice);
+    public static void printStaticShipPrice() {
+        System.out.println("Price: " + shipPrice);
     }
 
-    public void printShipPrice(){
-        System.out.println("Price: "+shipPrice);
+    public void printShipPrice() {
+        System.out.println("Price: " + shipPrice);
     }
 
     @Override
