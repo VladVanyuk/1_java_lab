@@ -11,6 +11,7 @@ public class Main{
         blackPearl.printShipPrice();
 
         System.out.println("First one: " + titanic.toString());
+
         System.out.println("Second one: " + blackPearl.toString());
     }
 }
